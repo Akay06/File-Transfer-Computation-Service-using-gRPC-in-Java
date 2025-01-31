@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option java_package = "proto";
+
+service ComputationService {
+    rpc Add(AddRequest) returns (AddResponse);
+    rpc Sort(SortRequest) returns (SortResponse);
+
+    rpc AddAsync(AddRequest) returns (AckResponse);
+    rpc SortAsync(SortRequest) returns (AckResponse);
+    
+    rpc GetAddResult(ResultRequest) returns (AddResponse);
+    rpc GetSortResult(ResultRequest) returns (SortResponse);
+}
+
+message AddRequest {
+    int32 num1 = 1;
+    int32 num2 = 2;
+}
+
+message AddResponse {
+    int32 result = 1;
+}
+
+message SortRequest {
+    repeated int32 array = 1;
+}
+
+message SortResponse {
+    repeated int32 sortedArray = 1;
+}
+
+message AckResponse {
+    string message = 1;
+}
+
+message ResultRequest {
+    string operation_id = 1;}
