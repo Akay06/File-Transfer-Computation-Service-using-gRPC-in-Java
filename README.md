@@ -2,8 +2,11 @@
 
 This project consists of a simple file upload/download service and a computation service, using **Remote Procedure Call (RPC)** for communication. The implementation is done in **Java** using **gRPC** for client-server interactions.
 
-## Requirements
-- **Java 17+**
+## 🛠️ Requirements
+- **Java 17+** 
+- **Maven 3.6+** (for dependency management and build)  
+- **Spring Boot 3.x**  
+- **gRPC for Spring Boot** (via dependencies) 
 
 ## How to Execute
 
